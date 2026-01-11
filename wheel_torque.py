@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #a = 54.735
+# FIX, math.sin USES RADIANS, double check all units
 a = 45
 
 target_torque = np.array([0.10, 0.00, 0.20])
@@ -71,4 +72,5 @@ margin = 0.05  # add a little space around arrows
 ax.set_xlim(all_vectors.min() - margin, all_vectors.max() + margin)
 ax.set_ylim(all_vectors.min() - margin, all_vectors.max() + margin)
 ax.set_zlim(all_vectors.min() - margin, all_vectors.max() + margin)
+
 plt.show()
