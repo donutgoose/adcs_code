@@ -11,8 +11,9 @@ target_torque = np.array([0.10, 0.00, 0.20])
 
 
 def get_bases(a):
-    sin_a = math.sin(a)
-    cos_a = math.cos(a)
+    b = math.radians(a)
+    sin_a = math.sin(b)
+    cos_a = math.cos(b)
     
     u_1 = np.array([cos_a, 0, sin_a])    
     u_2 = np.array([0, cos_a, sin_a])
@@ -74,3 +75,4 @@ ax.set_ylim(all_vectors.min() - margin, all_vectors.max() + margin)
 ax.set_zlim(all_vectors.min() - margin, all_vectors.max() + margin)
 
 plt.show()
+
